@@ -5,7 +5,7 @@ export default function() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const { loading, data, error } = useFetch(
-    `https://api.github.com/search/users?q=${query || "deepak"}&&page=${page}`
+    `https://api.github.com/search/users?q=${query || "deepak"}&&page=${page}&per_page=5`
   );
   console.log(loading, data, error, page);
 
